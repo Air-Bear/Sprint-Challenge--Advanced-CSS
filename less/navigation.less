@@ -1,1 +1,52 @@
 // Navigation code here
+
+nav
+{
+	background-color: @nav-bg;
+	.flex(column, center, center);
+	width: 95%;
+	margin: 0 auto;
+	font-style: @nav-font;
+	font-size: 2rem;
+
+
+	h1
+	{
+		font-size: 4rem;
+		margin-bottom: 2rem;
+	}
+
+	ul
+	{
+		.flex(row, space-evenly, center);
+		margin-bottom: 1rem;
+		li
+		{
+			text-decoration: none;
+			margin: 0 1rem;
+
+			&:hover
+			{
+				transition: all 0.3s;
+				transform: scale(1.2);
+			}
+
+			a
+			{
+				text-decoration: none;
+				color: @header-font-color;
+
+
+			}
+		}
+		
+	}
+
+	@media @phone
+	{
+		width: 100%;
+		position: fixed;
+		top: 0;
+		opacity: 0.8;
+	}
+}
